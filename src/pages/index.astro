@@ -11,11 +11,41 @@ const profilePicture = "https://picsum.photos/id/40/200";
 		<title>Astro</title>
 	</head>
 	<body>
-		<img
+		<div class="profile">
+			<img
 			src={profilePicture}
+			class="profile_picture"
 			alt="Cat nose."
 			width="100px"
 			height="100px"
-		/>
+			/>
+			<div class="profile_details">
+				<h1>Sarah Schlueter</h1>
+				<h2>Programmer Analyst at Wausau Supply Company</h2>
+				<p>Some interesting thing about what I do here.</p>
+			</div>
+		</div>
+		<style>
+			.profile {
+				display: flex;
+				align-items: flex-start;
+				flex-wrap: wrap;
+				padding: 1rem 0 3rem 0;
+			}
+
+			.profile_details {
+				flex: 1 0 300px;
+			}
+
+			.profile_details > h1 {
+				margin-top: 0;
+			}
+
+			.profile_picture {
+				border-radius: 50%;
+				margin: 0 2rem 1rem 0;
+			}
+			
+		</style>
 	</body>
 </html>
